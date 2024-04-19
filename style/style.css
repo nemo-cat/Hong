@@ -1,0 +1,86 @@
+
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&family=Tac+One&family=Unlock&display=swap');
+
+body {
+    color: #4D4D4D;
+    font-size: 14px;
+}
+
+section {
+    width: 100%;
+    height: 100vh;
+    padding: 40px;
+    /* width: calc(100vw - 80px);
+    height: calc(100vh - 80px);
+    margin: 40px; */
+    box-sizing: border-box;
+}
+
+#sec01 {
+    display: flex;
+    position: relative;
+}
+
+#sec01 .left {
+    position: relative;
+    width: calc(100% - 56.25%);
+}
+
+#sec01 h1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 65px 0 0;
+    font-family: "Unlock", serif;
+    font-size: 96px;
+    white-space: nowrap;
+    color: #232026;
+}
+
+#sec01 h1::before {
+    position: absolute;
+    top: 0;
+    left: -40px;
+    content: "";
+    width: 258px;
+    height: 258px;
+    background: url('../images/sec1-h1-bg.png') no-repeat center;
+    z-index: -1;
+    animation:  rotationBg 10s infinite ;
+}
+
+@keyframes rotationBg {
+    to {
+        transform: rotate(720deg);
+    }
+}
+
+#sec01 h1 .sub {
+    display: block;
+    font-size: 64px;
+}
+
+.point-color {
+    color: #BB0B0B;
+}
+
+#sec01 .right {
+    width: 56.25%;
+    height: 100%;
+    background-color: salmon;
+    background:url('../images/sec1-main.webp') no-repeat center top;
+    background-size: cover;
+
+}
+
+#sec01::before {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: "";
+    width: 100%;
+    height: 33.3333%;
+    background-color: #5B5A5D;
+    z-index: -1;
+}
