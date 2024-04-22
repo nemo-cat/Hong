@@ -9,63 +9,121 @@
     <link rel="stylesheet" href="style/defalut.css">
     <link rel="stylesheet" href="style/style.css">
     <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/gsap.min.js" integrity="sha512-qF6akR/fsZAB4Co1QDDnUXWnaQseLGXoniuSuSlPQK6+aWhlMZcHzkasCSlnWoe+TJuudlka1/IQ01Dnhgq95g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>
 </head>
 <body>
-    <section id="sec01">
-        <div class="left">
-            <h1>
-                <span class="sub">MUSICAL ACTOR</span>
-                <span class="point-color">H</span>ONG KWANG HO
-            </h1>
-        </div>
-        <div class="right"></div>
-    </section>
-    <section id="sec02">
-        <div class="left">
-            <div class="lf-top">
-                <div class="bg-item-wrap">
-                    <div class="bg-item">
-                        <img class="grayScale" src="images/sec2-item01.png" alt="">
+    <main>
+        <section id="sec01" class="section">
+            <div class="left">
+                <h1>
+                    <span class="sub">MUSICAL ACTOR</span>
+                    <span class="point-color">H</span>ONG KWANG HO
+                </h1>
+                <p class="magazin-text">
+                    A fan page created by someone who fell in love with musicals<br>
+                    after seeing the premiere of "Death Note" in 2015, dedicated to Hong Kwang-ho.
+                </p>
+                <span class="barcode"><img src="images/sec1-barcode.png" alt=""></span>
+            </div>
+            <div class="right"></div>
+        </section>
+        <section id="sec02" class="section">
+            <div class="left">
+                <div class="lf-top">
+                    <div class="bg-item-wrap">
+                        <div class="bg-item">
+                            <img class="grayScale" src="images/sec2-item01.png" alt="">
+                        </div>
+                        <div class="bg-item">
+                            <img class="grayScale" src="images/sec2-item02.png" alt="">
+                        </div>
+                        <div class="bg-item">
+                            <img class="grayScale" src="images/sec2-item03.png" alt="">
+                        </div>
+                        <div class="bg-item">
+                            <img class="grayScale" src="images/sec2-item04.png" alt="">
+                        </div>
+                        <div class="bg-item">
+                            <img class="grayScale" src="images/sec2-item05.png" alt="">
+                        </div>
                     </div>
-                    <div class="bg-item">
-                        <img class="grayScale" src="images/sec2-item02.png" alt="">
+                </div>
+                <div class="lf-bottom">
+                    <p class="magazin-text">
+                        홍광호는 2002년 뮤지컬 '명성황후'에서 앙상블로 데뷔한 이래, 
+                        '지킬 앤 하이드', '오페라의 유령', '노트르담 드 파리', '물랑루즈', 그리고 '데스노트' 등
+                        다양한 작품에서 주연을 맡으며 대한민국 최고의 뮤지컬 배우로 자리잡았습니다.
+                        그의 무대 경력은 국내를 넘어 국제적으로도 인정받고 있는데,
+                        특히 2014년에는 영국 웨스트엔드 무대에서 '미스 사이공'의 투이 역을 맡으며
+                        한국인 최초로 웨스트엔드에 진출하는 쾌거를 이루었습니다.
+                        이로써 홍광호는 국내외에서 모두 높은 평가를 받는 뮤지컬 스타로 자리매김하였으며,
+                        그의 뮤지컬 활동은 현재까지도 활발히 이어지고 있습니다.
+                    </p>
+                </div>
+            </div>
+            <div class="right">
+                <div class="main-img">
+                    <p class="pariesFont">
+                        The <span>Emperor</span><br>
+                        of <span>Musicals</span>
+                    </p>
+                    <!-- <img class="grayScale" src="images/sec2-main-color.webp" alt="" > -->
+                    <img id="sec02-main" class="grayScale" src="images/test.png" alt="" >
+                </div>
+            </div>
+        </section>
+        <section id="sec03" class="section">
+            <div class="left">
+                <h2 class="pariesFont sec3-tit">
+                    Filmography<br>Jekyll & Hyde
+                </h2>
+                <div class="item-box">
+                    <img src="images/sec3-item01.png" alt="">
+                    <p class="magazin-text">
+                        그의 필모 그래피중 하나인 뮤지컬 "지킬 앤 하이드"는 로버트 루이스 스티븐슨의 고전 소설 "지킬 박사와 하이드 씨"를 기반으로 한 작품으로,
+                        인간 내면의 선과 악에 대한 심도 깊은 탐구를 무대 위로 펼쳐내는 극입니다.
+                        이 뮤지컬은 극적인 전환과 강렬한 음악, 깊이 있는 캐릭터로 전 세계적으로 사랑받고 있으며,
+                        한국에서도 많은 관객들의 사랑을 받아왔습니다.
+                    </p>
+                </div>
+                <span class="left-side">
+                    <img src="images/sec3-side.png" alt="">
+                </span>
+            </div>
+            <div class="right">
+                <div class="item-box">
+                    <div class="item">
+                        <img src="images/sec3-item02.png" alt="">
+                        <p class="magazin-text">
+                            홍광호는 뮤지컬 "지킬 앤 하이드"에서 지킬 박사와 하이드의 이중적인 역할을 맡아 뛰어난 연기를 선보였습니다.
+                        </p>
                     </div>
-                    <div class="bg-item">
-                        <img class="grayScale" src="images/sec2-item03.png" alt="">
+                    <div class="item">
+                        <img src="images/sec3-item03.png" alt="">
+                        <p class="magazin-text">
+                            그는 지킬의 선량함과 하이드의 사악함 사이의 심리적 갈등을 섬세하게 표현하며 관객들에게 강한 인상을 남겼습니다.
+                            홍광호의 능숙한 캐릭터 전환은 그가 최고의 뮤지컬 배우 중 하나로 평가받는 이유를 명확히 보여줍니다.
+                        </p>
                     </div>
-                    <div class="bg-item">
-                        <img class="grayScale" src="images/sec2-item04.png" alt="">
-                    </div>
-                    <div class="bg-item">
-                        <img class="grayScale" src="images/sec2-item05.png" alt="">
+                </div>
+                <div class="item-box">
+                    <div class="item">
+                        <img src="images/sec3-item04.png" alt="">
+                        <p class="magazin-text">
+                            홍광호의 목소리는 각 캐릭터의 내면을 드러내는 데 핵심적인 역할을 합니다.
+                            그의 강력한 보컬은 지킬의 선함과 하이드의 악함을 각각 감정적으로 풍부하게 표현해내며,
+                            이는 곡의 매 순간마다 관객들에게 강렬한 감정적 공감을 불러일으킵니다.
+                            특히, "This is the Moment" 같은 넘버에서는 그의 뛰어난 가창력과 연기가 돋보이며,
+                            뮤지컬의 하이라이트로 꼽히곤 합니다.
+                        </p>
                     </div>
                 </div>
             </div>
-            <div class="lf-bottom">
-                <p class="magazin-text">
-                    홍광호는 2002년 뮤지컬 '명성황후'에서 앙상블로 데뷔한 이래, 
-                    '지킬 앤 하이드', '오페라의 유령', '노트르담 드 파리', '물랑루즈', 그리고 '데스노트' 등
-                    다양한 작품에서 주연을 맡으며 대한민국 최고의 뮤지컬 배우로 자리잡았습니다.
-                    그의 무대 경력은 국내를 넘어 국제적으로도 인정받고 있는데,
-                    특히 2014년에는 영국 웨스트엔드 무대에서 '미스 사이공'의 투이 역을 맡으며
-                    한국인 최초로 웨스트엔드에 진출하는 쾌거를 이루었습니다.
-                    이로써 홍광호는 국내외에서 모두 높은 평가를 받는 뮤지컬 스타로 자리매김하였으며,
-                    그의 뮤지컬 활동은 현재까지도 활발히 이어지고 있습니다.
-                </p>
-            </div>
-        </div>
-        <div class="right">
-            <div class="main-img">
-                <p class="pariesFont">
-                    The <span>Emperor</span><br>
-                    of <span>Musicals</span>
-                </p>
-                <!-- <img class="grayScale" src="images/sec2-main-color.webp" alt="" > -->
-                <img class="grayScale" src="images/test.png" alt="" >
-            </div>
-        </div>
-    </section>
-    <section id="sec03"></section>
-    
+        </section>
+    </main>
+    <script src="script/script.js"></script>
 </body>
 </html>

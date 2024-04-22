@@ -4,11 +4,15 @@
 
 @import url(//fonts.googleapis.com/earlyaccess/jejumyeongjo.css);
 
+/* html{overflow: hidden;} */
+
 
 body {
+    max-width: 1920px;
     font-family: 'Jeju Myeongjo', serif;
     color: #4D4D4D;
     font-size: 14px;
+    margin: 0 auto;
 }
 
 ::selection {
@@ -20,9 +24,6 @@ section {
     width: 100%;
     height: 100vh;
     padding: 40px;
-    /* width: calc(100vw - 80px);
-    height: calc(100vh - 80px);
-    margin: 40px; */
     box-sizing: border-box;
 }
 
@@ -50,6 +51,7 @@ section {
 #sec01 .left {
     position: relative;
     width: calc(100% - 56.25%);
+    z-index: 1;
 }
 
 #sec01 h1 {
@@ -86,6 +88,20 @@ section {
     font-size: 64px;
 }
 
+#sec01 .left p {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    text-align: center;
+}
+
+#sec01 .barcode {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
 #sec01 .right {
     width: 56.25%;
     height: 100%;
@@ -120,6 +136,8 @@ section {
 
 #sec02 .left {
     padding-right: 40px;
+    position: relative;
+    z-index: 1;
 }
 
 .lf-top {
@@ -132,7 +150,6 @@ section {
     left: 0;
     display: flex;
     flex-flow: row nowrap;
-    z-index: 1;
 }
 
 .bg-item-wrap .bg-item {
@@ -182,8 +199,6 @@ section {
     transform: rotate(-45deg);
     transition: all 0.5s;
 }
-
-
 
 .lf-bottom {
     display: flex;
@@ -237,4 +252,427 @@ section {
 
 .grayScale:hover {
     filter: none;
+}
+
+/* sec03 */
+#sec03 {
+    display: flex;
+    position: relative;
+    overflow: hidden;
+}
+
+#sec03::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    width: 100%;
+    height: 400px;
+    background-color: #84858B;
+    z-index: -1;
+}
+
+#sec03 .magazin-text {
+    padding: 10px 0;
+}
+
+#sec03 .left {
+    display: flex;
+    flex-flow: column;
+    align-items: flex-end;
+    width: 50%;
+    padding-right: 40px;
+}
+
+.sec3-tit {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    line-height: 60px;
+    font-weight: normal;
+    font-size: 48px;
+}
+
+#sec03 .left .item-box {
+    width: 65.63%;
+}
+
+#sec03 .left .item-box img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.left-side {
+    position: absolute;
+    left: 0;
+    bottom: 40px;
+}
+
+#sec03 .right {
+    display: flex;
+    width: 50%;
+}
+
+#sec03 .right .item-box {
+    width: 50%;
+}
+
+#sec03 .right .item-box:nth-child(1) {
+    position: relative;
+    top: -40px;
+    padding-right: 20px;
+}
+
+/* #sec03 .right .item-box:nth-child(1) .item:first-child {
+    color: #fff;
+}
+ */
+#sec03 .right .item-box:nth-child(2) {
+    padding: 40px 0 0 20px;
+}
+
+
+#sec03 .right img {
+    width: 100%;
+    /* max-height: 320px; */
+    object-fit: cover;
+}
+
+@media all and ( max-width: 1023px) {
+    section {
+        padding: 20px;
+    }
+
+    #sec01 h1 {
+        font-size: 68px;
+    }
+
+    #sec01 h1::before {
+        left: -20px;
+    }
+
+    #sec01 .left p {
+        padding: 0 10px;
+    }
+
+    /* sec02 */
+    #sec02 .left {
+        padding-right: 20px;
+    }
+
+    .lf-top {
+        height: calc( 100% - 50% );
+    }
+
+    .bg-item-wrap {
+        top: 40px;
+    }
+
+    .bg-item-wrap .bg-item {
+        width: 140px;
+        height: 140px;
+    }
+
+    .bg-item-wrap .bg-item:nth-child(1) {
+        top: 65px;
+        right: 15px;
+    }
+
+    .bg-item-wrap .bg-item:nth-child(2) {
+        top: -40px;
+        left: -45px;
+    }
+
+    .bg-item-wrap .bg-item:nth-child(3) {
+        top: 65px;
+        left: -75px;
+    }
+
+    .bg-item-wrap .bg-item:nth-child(4) {
+        top: -40px;
+        left: -105px;;
+    }
+
+    .bg-item-wrap .bg-item:nth-child(5) {
+        top: 65px;
+        left: -135px;
+    }
+
+    .bg-item-wrap .bg-item img {
+        width: 210px;
+        height: 210px;
+    }
+
+   /*  .lf-bottom {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 34.03%;
+    }
+
+    #sec02 .right {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        position: relative;
+        background-color: #84858B;
+    }
+
+    .main-img {
+        position: relative;
+        height: 80%;
+    }
+ */
+    .main-img p {
+        line-height: 50px;
+        font-size: 36px;
+    }
+
+    .main-img p span{
+        font-size: 64px;
+    }
+
+    /* sec03 */
+    #sec03 .left {
+        margin-top: 70px;
+        padding-right: 20px;
+    }
+
+    #sec03 .left .item-box {
+        padding-left: 10px;
+    }
+
+    .left-side {
+        bottom: 20px;
+    }
+
+    #sec03 .right .item-box:nth-child(1) {
+        padding-right: 10px;
+    }
+
+    #sec03 .right .item-box:nth-child(2) {
+        padding: 20px 0 0 10px;
+    }
+}
+
+@media all and ( max-width: 767px) {
+    section {
+        /* width: 100%;
+        height: 100vh; */
+        /* padding: 10px; */
+        padding: 0;
+    }
+
+    /* sec01 */
+    #sec01 {
+        flex-flow: column;
+        padding: 0;
+        position: relative;
+    }
+
+    #sec01 .left {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: flex-start;
+        align-items: center;
+        position: static;
+        width: 100%;
+        padding: 10px;
+    }
+
+    #sec01 h1 {
+        position: relative;
+        width: 300px;
+        height: 100px;
+        padding: 20px 0 0;
+        font-size: 36px;
+        text-align: center;
+    }
+
+    #sec01 h1::before {
+        top: 0;
+        left: -10px;
+        width: 129px;
+        height: 129px;
+        background-size: contain;
+    }
+
+    #sec01 h1 .sub {
+        font-size: 32px;
+    }
+
+    #sec01 .left p {
+        position: static;
+        transform: none;
+        padding: 30px 0;
+    }
+
+    #sec01 .barcode {
+        /* display: none; */
+        bottom: 10px;
+    }
+
+    #sec01 .right {
+        width: 100%;
+    }
+
+    #sec01::before {
+        display: none;
+    }
+
+    /* sec02 */
+    #sec02 {
+        flex-flow: column;
+        padding: 0;
+        height: auto;
+    }
+
+    #sec02 .left,
+    #sec02 .right {
+        width: 100%;
+        height: 50%;
+    }
+
+    #sec02 .left {
+        display: flex;
+        flex-flow: column;
+        padding: 0 10px;
+    }
+
+    .lf-top {
+        height: calc( 100% - 34.03% );
+        min-height: 280px;
+    }
+
+    .bg-item-wrap {
+        top: 80px;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-left: 50px;
+    }
+
+    .bg-item-wrap .bg-item {
+        width: 105px;
+        height: 105px;
+    }
+
+    .bg-item-wrap .bg-item:nth-child(1) {
+        top: 49px;
+        right: 11px;
+    }
+
+    .bg-item-wrap .bg-item:nth-child(2) {
+        top: -30px;
+        left: -33.8px;
+    }
+
+    .bg-item-wrap .bg-item:nth-child(3) {
+        top: 49px;
+        left: -56px;
+    }
+
+    .bg-item-wrap .bg-item:nth-child(4) {
+        top: -30px;
+        left: -78px;;
+    }
+
+    .bg-item-wrap .bg-item:nth-child(5) {
+        top: 49px;
+        left: -101px;
+    }
+
+    .bg-item-wrap .bg-item img {
+        width: 158px;
+        height: 158px;
+    }
+
+
+    .lf-bottom {
+        align-items: flex-end;
+        padding-bottom: 20px;
+    }
+
+    .main-img {
+        position: relative;
+        height: 100%;
+    }
+
+    .main-img p {
+        bottom: 10px;
+    }
+
+    /* sec03 */
+    #sec03 {
+        flex-flow: column;
+        height: auto;
+    }
+
+    #sec03::before {
+        display: none;
+    }
+
+    #sec03 .magazin-text {
+        padding: 10px;
+    }
+
+
+    #sec03 .left {
+        align-items: flex-start;
+        width: 100%;
+        height: 50%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .sec3-tit {
+        position: static;
+        width: 100%;
+        padding: 20px 0;
+        line-height: 50px;
+        font-size: 36px;
+        text-align: center;
+    }
+
+    #sec03 .left .item-box {
+        width: 100%;
+        padding: 0 0 20px;
+    }
+
+
+    .left-side {
+        display: none;
+    }
+
+    #sec03 .right {
+        flex-flow: column nowrap;
+        width: 100%;
+        height: 50%;
+    }
+
+    #sec03 .right .item-box {
+        width: 100%;
+        padding: 0;
+    }
+
+    #sec03 .right .item-box:nth-child(1) {
+        position: relative;
+        top: 0;
+        padding: 0 0 20px;
+    }
+
+    #sec03 .right .item-box:nth-child(1) .item:first-child {
+        padding: 0 0 20px;
+    }
+
+
+
+    #sec03 .right .item-box:nth-child(2) {
+        padding: 0 0 20px;
+    }
+
+
+    #sec03 .right img {
+        width: 100%;
+        object-fit: cover;
+    }
 }
